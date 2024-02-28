@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/IvMain"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="3dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvMain"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/IvMain"
+            android:textSize="20dp"
+            android:text="HERE THE TEXT"
+            android:layout_margin="3dp">
+        </TextView>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvDescription"
+            android:layout_below="@id/TvMain"
+            android:layout_toRightOf="@id/IvMain"
+            android:text="HERE THE TEXT"
+            android:textSize="16dp"
+            android:layout_margin="3dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TvClick"
+            android:textSize="14dp"
+            android:text="Click here to see more"
+            android:layout_below="@id/TvDescription"
+            android:layout_alignBottom="@id/IvMain"
+            android:layout_margin="1dp"
+            android:layout_alignParentRight="true">
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

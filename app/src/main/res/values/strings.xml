@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TazaBilim</string>
+    
+    <string-array name="Main">
+        <item>TimeTable</item>
+        <item>Articles</item>
+        <item>AppPolicy</item>
+        <item>Contacts</item>
+        <item>Contacts</item>
+        <item>Contacts</item>
+        <item>Contacts</item>
+        <item>Contacts</item>
+    </string-array>
+    
+    <string-array name="Description">
+        <item>Description 1</item>
+        <item>Description 2</item>
+        <item>Description 3</item>
+        <item>Description 4</item>
+        <item>Description 4</item>
+        <item>Description 4</item>
+        <item>Description 4</item>
+        <item>Description 4</item>
+    </string-array>
+</resources>
