@@ -87,13 +87,21 @@ public class MainActivity extends AppCompatActivity {
             description.setText(descriptionArray[position]);
 
             // Установка изображений в зависимости от заголовка
-            if (titleArray[position].equalsIgnoreCase("Timetable")) {
+            if (titleArray[position].equalsIgnoreCase("Time Table")) {
                 imageView.setImageResource(R.drawable.timetable);
             } else if (titleArray[position].equalsIgnoreCase("Articles")) {
                 imageView.setImageResource(R.drawable.articles);
-            } else if (titleArray[position].equalsIgnoreCase("AppPolicy")) {
+            } else if (titleArray[position].equalsIgnoreCase("App Policy")) {
                 imageView.setImageResource(R.drawable.apppolicy);
-            } else {
+            } else if (titleArray[position].equalsIgnoreCase("Events")){
+                imageView.setImageResource(R.drawable.event);
+            }else if (titleArray[position].equalsIgnoreCase("News")) {
+                imageView.setImageResource(R.drawable.news);
+            }else if (titleArray[position].equalsIgnoreCase("Study Tools")) {
+                imageView.setImageResource(R.drawable.study);
+            }else if (titleArray[position].equalsIgnoreCase("Resource Library")) {
+                imageView.setImageResource(R.drawable.books);
+            }else{
                 imageView.setImageResource(R.drawable.contacts);
             }
             return convertView;
