@@ -63,36 +63,50 @@ public class WeekActivity extends AppCompatActivity {
         });
     }
 
-    public class WeekAdapter extends ArrayAdapter{
+    public class WeekAdapter extends ArrayAdapter<String> {
         private int resource;
         private LayoutInflater layoutInflater;
-        private String[] week = new String[]{};
+        private String[] week;
+        private int[] images = {
+                R.drawable.monday,
+                R.drawable.tuesday,
+                R.drawable.wednesday,
+                R.drawable.thursday,
+                R.drawable.friday,
+                R.drawable.saturday
+        };
 
         public WeekAdapter(Context context, int resource, String[] objects) {
-            super(context, resource);
+            super(context, resource, objects);
             this.resource = resource;
             this.week = objects;
-            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            layoutInflater = LayoutInflater.from(context);
         }
 
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             ViewHolder holder;
-            if(convertView == null){
+            if (convertView == null) {
                 holder = new ViewHolder();
-                convertView = layoutInflater.inflate(resource,null);
-                holder.ivLogo = (ImageView) convertView.findViewById(R.id.IvDay);
-                holder.tvWeek = (TextView) convertView.findViewById(R.id.TvDay);
+                convertView = layoutInflater.inflate(resource, parent, false);
+                holder.ivLogo = convertView.findViewById(R.id.IvDay);
+                holder.tvWeek = convertView.findViewById(R.id.TvDay);
                 convertView.setTag(holder);
-            }else{
-                holder = (ViewHolder)convertView.getTag();
+            } else {
+                holder = (ViewHolder) convertView.getTag();
             }
-            holder.tvWeek.setText(week[position]);
+
+            holder.tvWeek.setText(getItem(position));
+            if (position >= 0 && position < images.length) {
+                holder.ivLogo.setImageResource(images[position]); // Set the image for the current day
+            }
+
             return convertView;
         }
-        class ViewHolder{
-            private ImageView ivLogo;
-            private TextView tvWeek;
+
+         class ViewHolder {
+            ImageView ivLogo;
+            TextView tvWeek;
         }
     }
 

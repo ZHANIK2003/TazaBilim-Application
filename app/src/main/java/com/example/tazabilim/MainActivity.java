@@ -1,4 +1,5 @@
 package com.example.tazabilim;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +14,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import com.example.tazabilim.R;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
@@ -23,64 +26,59 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Инициализация Toolbar
         Toolbar toolbar = findViewById(R.id.ToolbarMain);
         setSupportActionBar(toolbar);
 
-        // Получение ActionBar и установка заголовка
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle("TazaBilim");
         }
 
-        // Инициализация ListView и настройка адаптера
         listView = findViewById(R.id.LvMain);
         setupListView();
     }
 
     private void setupListView() {
-
         String[] titles = getResources().getStringArray(R.array.Main);
         String[] descriptions = getResources().getStringArray(R.array.Description);
-
-        // Установка адаптера для ListView
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, titles, descriptions);
         listView.setAdapter(simpleAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0: {
-                        Intent intent = new Intent(MainActivity.this, WeekActivity.class);
-                        startActivity(intent);
-                        break;
-                    }
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                    case 7: {
-                        break;
-                    }
-                }
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            // Example: Navigate based on position; you can use a switch or if-else logic here
+            if (position == 0) {
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
             }
+            // Add more cases as needed for other positions
         });
     }
 
     public class SimpleAdapter extends BaseAdapter {
-        private Context mContext;
-        private LayoutInflater layoutInflater;
-        private String[] titleArray;
-        private String[] descriptionArray;
+        private final Context mContext;
+        private final LayoutInflater layoutInflater;
+        private final String[] titleArray;
+        private final String[] descriptionArray;
+        private final Map<String, Integer> imageMap;
 
         public SimpleAdapter(Context context, String[] titles, String[] descriptions) {
-            mContext = context;
-            titleArray = titles;
-            descriptionArray = descriptions;
-            layoutInflater = LayoutInflater.from(context);
+            this.mContext = context;
+            this.titleArray = titles;
+            this.descriptionArray = descriptions;
+            this.layoutInflater = LayoutInflater.from(context);
+            this.imageMap = initializeImageMap();
+        }
+
+        private Map<String, Integer> initializeImageMap() {
+            Map<String, Integer> map = new HashMap<>();
+            map.put("Time Table", R.drawable.timetable);
+            map.put("Articles", R.drawable.articles);
+            map.put("App Policy", R.drawable.apppolicy);
+            map.put("Events", R.drawable.event);
+            map.put("News", R.drawable.news);
+            map.put("Study Tools", R.drawable.study);
+            map.put("Resource Library", R.drawable.books);
+            map.put("Contacts", R.drawable.contacts);
+            return map;
         }
 
         @Override
@@ -100,35 +98,36 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder holder;
             if (convertView == null) {
-                convertView = layoutInflater.inflate(R.layout.main_activity_single_item, null);
+                convertView = layoutInflater.inflate(R.layout.main_activity_single_item, parent, false);
+                holder = new ViewHolder();
+                holder.title = convertView.findViewById(R.id.TvMain);
+                holder.description = convertView.findViewById(R.id.TvDescription);
+                holder.imageView = convertView.findViewById(R.id.IvMain);
+                convertView.setTag(holder);
+            } else {
+                holder = (ViewHolder) convertView.getTag();
             }
-            TextView title = convertView.findViewById(R.id.TvMain);
-            TextView description = convertView.findViewById(R.id.TvDescription);
-            ImageView imageView = convertView.findViewById(R.id.IvMain);
 
-            title.setText(titleArray[position]);
-            description.setText(descriptionArray[position]);
-
-            // Установка изображений в зависимости от заголовка
-            if (titleArray[position].equalsIgnoreCase("Time Table")) {
-                imageView.setImageResource(R.drawable.timetable);
-            } else if (titleArray[position].equalsIgnoreCase("Articles")) {
-                imageView.setImageResource(R.drawable.articles);
-            } else if (titleArray[position].equalsIgnoreCase("App Policy")) {
-                imageView.setImageResource(R.drawable.apppolicy);
-            } else if (titleArray[position].equalsIgnoreCase("Events")){
-                imageView.setImageResource(R.drawable.event);
-            }else if (titleArray[position].equalsIgnoreCase("News")) {
-                imageView.setImageResource(R.drawable.news);
-            }else if (titleArray[position].equalsIgnoreCase("Study Tools")) {
-                imageView.setImageResource(R.drawable.study);
-            }else if (titleArray[position].equalsIgnoreCase("Resource Library")) {
-                imageView.setImageResource(R.drawable.books);
-            }else{
-                imageView.setImageResource(R.drawable.contacts);
+            String title = titleArray[position];
+            holder.title.setText(title);
+            holder.description.setText(descriptionArray[position]);
+            Integer imageResId = imageMap.get(title);
+            if (imageResId != null) {
+                holder.imageView.setImageResource(imageResId);
+                holder.imageView.setVisibility(View.VISIBLE);
+            } else {
+                holder.imageView.setVisibility(View.GONE); // Or set a default image
             }
+
             return convertView;
+        }
+
+        class ViewHolder {
+            TextView title;
+            TextView description;
+            ImageView imageView;
         }
     }
 }
