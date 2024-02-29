@@ -1,9 +1,11 @@
 package com.example.tazabilim;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -37,13 +39,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupListView() {
-        // Получение данных из ресурсов
+
         String[] titles = getResources().getStringArray(R.array.Main);
         String[] descriptions = getResources().getStringArray(R.array.Description);
 
         // Установка адаптера для ListView
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, titles, descriptions);
         listView.setAdapter(simpleAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0: {
+                        Intent intent = new Intent(MainActivity.this, WeekActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7: {
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     public class SimpleAdapter extends BaseAdapter {

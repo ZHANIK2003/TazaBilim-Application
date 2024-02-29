@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TazaBilim</string>
-    
+
     <string-array name="Main">
         <item>Time Table</item>
         <item>Articles</item>
@@ -11,7 +11,7 @@
         <item>Resource Library</item>
         <item>Contacts</item>
     </string-array>
-    
+
     <string-array name="Description">
         <item>Description 1</item>
         <item>Description 2</item>
@@ -21,5 +21,14 @@
         <item>Description 6</item>
         <item>Description 7</item>
         <item>Description 8</item>
+    </string-array>
+
+    <string-array name="week">
+        <item> Monday </item>
+        <item> Tuesday </item>
+        <item> Wednesday </item>
+        <item> Thursday </item>
+        <item> Friday </item>
+        <item> Saturday </item>
     </string-array>
 </resources>
