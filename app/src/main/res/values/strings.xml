@@ -31,4 +31,112 @@
         <item>Friday</item>
         <item>Saturday</item>
     </string-array>
+
+    <string-array name="Monday">
+        <item>Calculus</item>
+        <item>Introduction to Psychology</item>
+        <item>Break</item>
+        <item>Organic Chemistry</item>
+        <item>European History</item>
+        <item>Software Engineering</item>
+    </string-array>
+
+    <string-array name="Tuesday">
+        <item>Physics</item>
+        <item>Microeconomics</item>
+        <item>Break</item>
+        <item>Macroeconomics</item>
+        <item>World Literature</item>
+        <item>Data Structures</item>
+    </string-array>
+
+    <string-array name="Wednesday">
+        <item>Linear Algebra</item>
+        <item>General Biology</item>
+        <item>Break</item>
+        <item>Philosophy</item>
+        <item>Political Science</item>
+        <item>Web Development</item>
+    </string-array>
+
+    <string-array name="Thursday">
+        <item>Statistics</item>
+        <item>Environmental Science</item>
+        <item>Break</item>
+        <item>Comparative Religion</item>
+        <item>Modern Art</item>
+        <item>Mobile App Development</item>
+    </string-array>
+
+    <string-array name="Friday">
+        <item>Quantum Mechanics</item>
+        <item>Human Anatomy</item>
+        <item>Break</item>
+        <item>Classical Mechanics</item>
+        <item>Abstract Algebra</item>
+        <item>Cloud Computing</item>
+    </string-array>
+
+    <string-array name="Saturday">
+        <item>Public Speaking</item>
+        <item>Business Law</item>
+        <item>Break</item>
+        <item>Digital Marketing</item>
+        <item>International Relations</item>
+        <item>Human-Computer Interaction</item>
+    </string-array>
+
+    <string-array name="time1">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="time2">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="time3">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="time4">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="time5">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="time6">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 </resources>
