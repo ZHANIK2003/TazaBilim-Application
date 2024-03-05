@@ -33,57 +33,57 @@
     </string-array>
 
     <string-array name="Monday">
-        <item>Calculus</item>
-        <item>Introduction to Psychology</item>
+        <item>Programming Fundamentals</item>
+        <item>Web Development</item>
         <item>Break</item>
-        <item>Organic Chemistry</item>
-        <item>European History</item>
-        <item>Software Engineering</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Database Management</item>
+        <item>Cybersecurity</item>
     </string-array>
 
     <string-array name="Tuesday">
-        <item>Physics</item>
-        <item>Microeconomics</item>
+        <item>Web Development</item>
+        <item>Database Management</item>
         <item>Break</item>
-        <item>Macroeconomics</item>
-        <item>World Literature</item>
-        <item>Data Structures</item>
+        <item>Cybersecurity</item>
+        <item>Programming Fundamentals</item>
+        <item>Data Structures and Algorithms</item>
     </string-array>
 
     <string-array name="Wednesday">
-        <item>Linear Algebra</item>
-        <item>General Biology</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Cybersecurity</item>
         <item>Break</item>
-        <item>Philosophy</item>
-        <item>Political Science</item>
+        <item>Programming Fundamentals</item>
         <item>Web Development</item>
+        <item>Database Management</item>
     </string-array>
 
     <string-array name="Thursday">
-        <item>Statistics</item>
-        <item>Environmental Science</item>
+        <item>Database Management</item>
+        <item>Programming Fundamentals</item>
         <item>Break</item>
-        <item>Comparative Religion</item>
-        <item>Modern Art</item>
-        <item>Mobile App Development</item>
+        <item>Web Development</item>
+        <item>Cybersecurity</item>
+        <item>Data Structures and Algorithms</item>
     </string-array>
 
     <string-array name="Friday">
-        <item>Quantum Mechanics</item>
-        <item>Human Anatomy</item>
+        <item>Cybersecurity</item>
+        <item>Data Structures and Algorithms</item>
         <item>Break</item>
-        <item>Classical Mechanics</item>
-        <item>Abstract Algebra</item>
-        <item>Cloud Computing</item>
+        <item>Database Management</item>
+        <item>Web Development</item>
+        <item>Programming Fundamentals</item>
     </string-array>
 
     <string-array name="Saturday">
-        <item>Public Speaking</item>
-        <item>Business Law</item>
+        <item>Programming Fundamentals</item>
+        <item>Cybersecurity</item>
         <item>Break</item>
-        <item>Digital Marketing</item>
-        <item>International Relations</item>
-        <item>Human-Computer Interaction</item>
+        <item>Web Development</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Database Management</item>
     </string-array>
 
     <string-array name="time1">
