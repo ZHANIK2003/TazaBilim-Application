@@ -23,7 +23,7 @@
             android:layout_margin="3dp"
             android:layout_toRightOf="@id/IvDayDetails"
             android:text="Subjects"
-            android:textSize="32dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
@@ -39,7 +39,8 @@
             android:layout_marginRight="13dp"
             android:layout_alignParentRight="true"
             android:text="Time"
-            android:textSize="14dp">
+            android:textStyle="bold"
+            android:textSize="16dp">
         </TextView>
 
     </RelativeLayout>

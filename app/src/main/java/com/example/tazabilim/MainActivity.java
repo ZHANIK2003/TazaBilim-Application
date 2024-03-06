@@ -45,11 +45,15 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(simpleAdapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            // Example: Navigate based on position; you can use a switch or if-else logic here
             if (position == 0) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 1){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 2){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 3){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
             }
-            // Add more cases as needed for other positions
         });
     }
 

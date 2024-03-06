@@ -2,9 +2,11 @@ package com.example.tazabilim;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -15,8 +17,6 @@ import android.widget.TextView;
 public class DayDetail extends AppCompatActivity {
 
     private ListView listView;
-
-    // Предполагается, что значения для этих массивов будут инициализированы в методе setupListView()
     public static String[] Monday;
     public static String[] Tuesday;
     public static String[] Wednesday;
@@ -32,18 +32,21 @@ public class DayDetail extends AppCompatActivity {
     private String[] PreferredDay;
     private String[] PreferredTime;
 
+    String selectedDay = WeekActivity.sharedPreferences.getString(WeekActivity.SEL_DAY, null);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day_detail);
 
-        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.ToolbarDayDetail);
+        Toolbar toolbar = findViewById(R.id.ToolbarDayDetail);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(WeekActivity.sharedPreferences.getString(WeekActivity.SEL_DAY,null));
+            String selectedDay = WeekActivity.sharedPreferences.getString(WeekActivity.SEL_DAY, null);
+            actionBar.setTitle(selectedDay);
         }
 
         listView = findViewById(R.id.LvDayDetail);
@@ -65,20 +68,53 @@ public class DayDetail extends AppCompatActivity {
         time5 = getResources().getStringArray(R.array.time5);
         time6 = getResources().getStringArray(R.array.time6);
 
+        if (selectedDay != null) {
+            switch (selectedDay) {
+                case "Monday":
+                    PreferredDay = Monday;
+                    PreferredTime = time1;
+                    break;
+                case "Tuesday":
+                    PreferredDay = Tuesday;
+                    PreferredTime = time2;
+                    break;
+                case "Wednesday":
+                    PreferredDay = Wednesday;
+                    PreferredTime = time3;
+                    break;
+                case "Thursday":
+                    PreferredDay = Thursday;
+                    PreferredTime = time4;
+                    break;
+                case "Friday":
+                    PreferredDay = Friday;
+                    PreferredTime = time5;
+                    break;
+                case "Saturday":
+                    PreferredDay = Saturday;
+                    PreferredTime = time6;
+                    break;
+                default:
+                    PreferredDay = new String[]{};
+                    PreferredTime = new String[]{};
+                    break;
+            }
+        }
+
         SimpleAdapter adapter = new SimpleAdapter(this, PreferredDay, PreferredTime);
         listView.setAdapter(adapter);
     }
 
-    public class SimpleAdapter extends BaseAdapter {
-        private Context mContext;
-        private LayoutInflater layoutInflater;
-        private String[] subjectArray;
-        private String[] timeArray;
+    private static class SimpleAdapter extends BaseAdapter {
+        private final Context context;
+        private final LayoutInflater layoutInflater;
+        private final String[] subjectArray;
+        private final String[] timeArray;
 
-        public SimpleAdapter(Context context, String[] subjectArray, String[] timeArray) {
-            this.mContext = context;
-            this.subjectArray = subjectArray;
-            this.timeArray = timeArray;
+        public SimpleAdapter(Context context, String[] subjects, String[] times) {
+            this.context = context;
+            this.subjectArray = subjects;
+            this.timeArray = times;
             this.layoutInflater = LayoutInflater.from(context);
         }
 
@@ -105,7 +141,7 @@ public class DayDetail extends AppCompatActivity {
                 holder = new ViewHolder();
                 holder.subject = convertView.findViewById(R.id.TvDayDetails);
                 holder.time = convertView.findViewById(R.id.tvTimeDayDetail);
-                holder.imageView = convertView.findViewById(R.id.IvDayDetails); // Инициализация ImageView
+                holder.imageView = convertView.findViewById(R.id.IvDayDetails);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
@@ -113,27 +149,36 @@ public class DayDetail extends AppCompatActivity {
 
             holder.subject.setText(subjectArray[position]);
             holder.time.setText(timeArray[position]);
-
             if (subjectArray[position].equalsIgnoreCase("Programming Fundamentals")) {
                 holder.imageView.setImageResource(R.drawable.programming);
-            } else if(subjectArray[position].equalsIgnoreCase("Cybersecurity")){
+            } else if (subjectArray[position].equalsIgnoreCase("Cybersecurity")) {
                 holder.imageView.setImageResource(R.drawable.cybersecurity);
-            }else if(subjectArray[position].equalsIgnoreCase("Data Structures and Algorithms")){
+            } else if (subjectArray[position].equalsIgnoreCase("Data Structures and Algorithms")) {
                 holder.imageView.setImageResource(R.drawable.diagram);
-            }else if(subjectArray[position].equalsIgnoreCase("Database Management")){
+            } else if (subjectArray[position].equalsIgnoreCase("Database Management")) {
                 holder.imageView.setImageResource(R.drawable.database);
-            }else if(subjectArray[position].equalsIgnoreCase("Web Development")){
+            } else if (subjectArray[position].equalsIgnoreCase("Web Development")) {
                 holder.imageView.setImageResource(R.drawable.web);
-            }else{
+            } else {
                 holder.imageView.setImageResource(R.drawable.pause);
             }
+
             return convertView;
         }
 
-        private class ViewHolder {
+        static class ViewHolder {
             TextView subject;
             TextView time;
             ImageView imageView;
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                onBackPressed();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
