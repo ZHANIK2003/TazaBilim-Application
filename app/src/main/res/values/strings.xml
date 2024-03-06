@@ -14,7 +14,7 @@
 
     <string-array name="Description">
         <item>Access your personalized timetable for classes, exams, and meetings</item>
-        <item>Read insightful articles on a range of topics relevant to your interests and studies</item>
+        <item>Read insightful articles on a range of topics relevant to your interests</item>
         <item>Understand the rules and guidelines that govern the use of this application</item>
         <item>Stay updated on upcoming events, workshops, and seminars happening around you</item>
         <item>Get the latest news updates related to your field of study and interests</item>
@@ -23,120 +23,125 @@
         <item>Find contact information for faculty, administration, and student support services</item>
     </string-array>
 
-        <string-array name="week">
-            <item>Monday</item>
-            <item>Tuesday</item>
-            <item>Wednesday</item>
-            <item>Thursday</item>
-            <item>Friday</item>
-            <item>Saturday</item>
-        </string-array>
+    <string-array name="week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
 
-        <string-array name="Monday">
-            <item>Programming Fundamentals</item>
-            <item>Web Development</item>
-            <item>Break</item>
-            <item>Data Structures and Algorithms</item>
-            <item>Database Management</item>
-            <item>Cybersecurity</item>
-        </string-array>
+    <string-array name="Monday">
+        <item>Programming Fundamentals</item>
+        <item>Web Development</item>
+        <item>Break</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Database Management</item>
+        <item>Cybersecurity</item>
+    </string-array>
 
-        <string-array name="Tuesday">
-            <item>Web Development</item>
-            <item>Database Management</item>
-            <item>Break</item>
-            <item>Cybersecurity</item>
-            <item>Programming Fundamentals</item>
-            <item>Data Structures and Algorithms</item>
-        </string-array>
+    <string-array name="Tuesday">
+        <item>Web Development</item>
+        <item>Database Management</item>
+        <item>Break</item>
+        <item>Cybersecurity</item>
+        <item>Programming Fundamentals</item>
+        <item>Data Structures and Algorithms</item>
+    </string-array>
 
-        <string-array name="Wednesday">
-            <item>Data Structures and Algorithms</item>
-            <item>Cybersecurity</item>
-            <item>Break</item>
-            <item>Programming Fundamentals</item>
-            <item>Web Development</item>
-            <item>Database Management</item>
-        </string-array>
+    <string-array name="Wednesday">
+        <item>Data Structures and Algorithms</item>
+        <item>Cybersecurity</item>
+        <item>Break</item>
+        <item>Programming Fundamentals</item>
+        <item>Web Development</item>
+        <item>Database Management</item>
+    </string-array>
 
-        <string-array name="Thursday">
-            <item>Database Management</item>
-            <item>Programming Fundamentals</item>
-            <item>Break</item>
-            <item>Web Development</item>
-            <item>Cybersecurity</item>
-            <item>Data Structures and Algorithms</item>
-        </string-array>
+    <string-array name="Thursday">
+        <item>Database Management</item>
+        <item>Programming Fundamentals</item>
+        <item>Break</item>
+        <item>Web Development</item>
+        <item>Cybersecurity</item>
+        <item>Data Structures and Algorithms</item>
+    </string-array>
 
-        <string-array name="Friday">
-            <item>Cybersecurity</item>
-            <item>Data Structures and Algorithms</item>
-            <item>Break</item>
-            <item>Database Management</item>
-            <item>Web Development</item>
-            <item>Programming Fundamentals</item>
-        </string-array>
+    <string-array name="Friday">
+        <item>Cybersecurity</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Break</item>
+        <item>Database Management</item>
+        <item>Web Development</item>
+        <item>Programming Fundamentals</item>
+    </string-array>
 
-        <string-array name="Saturday">
-            <item>Programming Fundamentals</item>
-            <item>Cybersecurity</item>
-            <item>Break</item>
-            <item>Web Development</item>
-            <item>Data Structures and Algorithms</item>
-            <item>Database Management</item>
-        </string-array>
+    <string-array name="Saturday">
+        <item>Programming Fundamentals</item>
+        <item>Cybersecurity</item>
+        <item>Break</item>
+        <item>Web Development</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Database Management</item>
+    </string-array>
 
-        <string-array name="time1">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time1">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 
-        <string-array name="time2">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time2">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 
-        <string-array name="time3">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time3">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 
-        <string-array name="time4">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time4">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 
-        <string-array name="time5">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time5">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
 
-        <string-array name="time6">
-            <item>08:00 - 09:00</item>
-            <item>09:15 - 10:15</item>
-            <item>10:30 - 11:00</item>
-            <item>11:15 - 12:15</item>
-            <item>12:30 - 13:30</item>
-            <item>13:45 - 14:45</item>
-        </string-array>
+    <string-array name="time6">
+        <item>08:00 - 09:00</item>
+        <item>09:15 - 10:15</item>
+        <item>10:30 - 11:00</item>
+        <item>11:15 - 12:15</item>
+        <item>12:30 - 13:30</item>
+        <item>13:45 - 14:45</item>
+    </string-array>
+
+    <string-array name="students">
+        <item>Baizharassov Zhanibek</item>
+        <item>Karimzhanov Islambek</item>
+    </string-array>
 </resources>

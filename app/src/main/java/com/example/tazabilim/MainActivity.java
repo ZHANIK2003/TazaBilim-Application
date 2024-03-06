@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -47,20 +48,20 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener((parent, view, position, id) -> {
             if (position == 0) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 1){
+            } else if (position == 1) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 2){
+            } else if (position == 2) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 3){
+            } else if (position == 3) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 4){
+            } else if (position == 4) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 5){
+            } else if (position == 5) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            } else if(position == 6){
+            } else if (position == 6) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
-            }else if(position == 7){
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            } else if (position == 7) {
+                startActivity(new Intent(MainActivity.this, ContactsCardActivity.class));
             }
         });
     }
