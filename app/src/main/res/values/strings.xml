@@ -2,7 +2,7 @@
     <string name="app_name">TazaBilim</string>
 
     <string-array name="Main">
-        <item>Time Table</item>
+        <item>Schedule</item>
         <item>Articles</item>
         <item>App Policy</item>
         <item>Events</item>
@@ -13,14 +13,14 @@
     </string-array>
 
     <string-array name="Description">
-        <item>Description 1</item>
-        <item>Description 2</item>
-        <item>Description 3</item>
-        <item>Description 4</item>
-        <item>Description 5</item>
-        <item>Description 6</item>
-        <item>Description 7</item>
-        <item>Description 8</item>
+        <item>Access your personalized timetable for classes, exams, and meetings</item>
+        <item>Read insightful articles on a range of topics relevant to your interests and studies</item>
+        <item>Understand the rules and guidelines that govern the use of this application</item>
+        <item>Stay updated on upcoming events, workshops, and seminars happening around you</item>
+        <item>Get the latest news updates related to your field of study and interests</item>
+        <item>Discover a collection of tools designed to aid your study process and enhance productivity</item>
+        <item>Access a vast library of resources including books, journals, and articles to support your learning</item>
+        <item>Find contact information for faculty, administration, and student support services</item>
     </string-array>
 
         <string-array name="week">

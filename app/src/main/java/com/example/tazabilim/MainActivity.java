@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("TazaBilim");
+            actionBar.setTitle("Taza Bilim");
         }
 
         listView = findViewById(R.id.LvMain);
@@ -52,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             }else if(position == 2){
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
             }else if(position == 3){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 4){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 5){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            } else if(position == 6){
+                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+            }else if(position == 7){
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
             }
         });
@@ -74,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         private Map<String, Integer> initializeImageMap() {
             Map<String, Integer> map = new HashMap<>();
-            map.put("Time Table", R.drawable.timetable);
+            map.put("Schedule", R.drawable.timetable);
             map.put("Articles", R.drawable.articles);
             map.put("App Policy", R.drawable.apppolicy);
             map.put("Events", R.drawable.event);
