@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (position == 3) {
                 startActivity(new Intent(MainActivity.this, EventActivity.class));
             } else if (position == 4) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, NewsActivity.class));
             } else if (position == 5) {
                 startActivity(new Intent(MainActivity.this, ToolsActivity.class));
             } else if (position == 6) {
