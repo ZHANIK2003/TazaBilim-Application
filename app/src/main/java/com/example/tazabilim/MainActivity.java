@@ -49,17 +49,17 @@ public class MainActivity extends AppCompatActivity {
             if (position == 0) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
             } else if (position == 1) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, ArticlesActivity.class));
             } else if (position == 2) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, PolicyActivity.class));
             } else if (position == 3) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, EventActivity.class));
             } else if (position == 4) {
                 startActivity(new Intent(MainActivity.this, WeekActivity.class));
             } else if (position == 5) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, ToolsActivity.class));
             } else if (position == 6) {
-                startActivity(new Intent(MainActivity.this, WeekActivity.class));
+                startActivity(new Intent(MainActivity.this, ResourceActivity.class));
             } else if (position == 7) {
                 startActivity(new Intent(MainActivity.this, ContactsCardActivity.class));
             }
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 holder.imageView.setImageResource(imageResId);
                 holder.imageView.setVisibility(View.VISIBLE);
             } else {
-                holder.imageView.setVisibility(View.GONE); // Or set a default image
+                holder.imageView.setVisibility(View.GONE);
             }
 
             return convertView;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduction\n\nWelcome to Tazabilim application! By using our app, you agree to comply with our terms of use outlined below. Please read each section carefully to understand your rights and obligations.\n\nAcceptance of Terms\n\nBy accessing or using our app, you confirm your agreement to be bound by these terms. If you do not agree to these terms, please do not use our app.\n\nContent Rights\n\nAll content displayed or available within our app, including texts, graphics, logos, images, and software, is the property of [Your Company Name] and is protected by both local and international copyright laws. Unauthorized use of any content outside the app without our explicit permission is strictly prohibited.\n\nUser Obligations\n\nYou are expected to use the app responsibly and lawfully. Engaging in activities that are unlawful, offensive, or infringe on the rights of others is prohibited. You must also refrain from spreading viruses, malware, or other harmful code.\n\nUser Accounts\n\nIf our app requires you to open an account, you must complete the registration process by providing current, complete, and accurate information as prompted by the registration form. You are responsible for maintaining the confidentiality of your account information and are fully responsible for all activities that occur under your account.\n\nPrivacy Policy\n\nYour privacy is important to us. Our Privacy Policy, incorporated into these terms, describes how we handle the information you provide to us when you use our app. Please review our Privacy Policy in detail.\n\nLimitation of Liability\n\nWe will not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses resulting from the use or the inability to use the app.\n\nModification and Termination\n\nWe reserve the right to modify, suspend, or discontinue the app at any time without notice to you. We may also modify these terms from time to time, and your continued use of the app after any modifications indicates your acceptance of the new terms.\n\nGoverning Law\n\nThese terms will be governed by and construed in accordance with the laws of the jurisdiction in which our company is registered, without giving effect to any principles of conflicts of law.\n\nPolicy Changes\n\nWe reserve the right to update or modify this policy at any time without prior notice. Your continued use of the app following any changes signifies your acceptance of our updated terms."
+        android:textSize="16sp"
+        android:textColor="#000"/>
+
+</ScrollView>
